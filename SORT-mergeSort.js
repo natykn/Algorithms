@@ -9,15 +9,13 @@
  * 3. Merge arrays  
  */
 
-const mergeSort = (arr) => {
+export const mergeSort = (arr) => {
     //base condition 
     if (arr.length < 2) return null;
 
     let mid = arr.length / 2;
     let left_arr = arr.slice(0, mid);
     let rigth_arr = arr.slice(mid, arr.length)
-    console.log(left_arr);
-    console.log(rigth_arr);
 
     //recursion
     mergeSort(left_arr);
@@ -49,8 +47,10 @@ const mergeSort = (arr) => {
     }
 
 };
+export const main = () => {
+    //Main
+    arr = [1, 12, 5, 6, 8, 9, 4];
+    mergeSort(arr);
+    console.log(arr);
+}
 
-//Main
-arr = [1, 12, 5, 6, 8, 9, 4];
-mergeSort(arr);
-console.log(arr);
